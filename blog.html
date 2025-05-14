@@ -1,0 +1,43 @@
+---
+layout: page
+title: "Blog"
+permalink: /blog.html
+---
+
+<div class="blog">
+  <h2>All Posts</h2>
+  
+  <div class="blog-posts">
+    {% for post in site.posts %}
+      <div class="blog-card">
+        <div class="blog-card-header" onclick="toggleBlogContent({{ forloop.index }})">
+          <h3>{{ post.title }}</h3>
+          {% if post.subtitle %}
+            <p class="subtitle">{{ post.subtitle }}</p>
+          {% endif %}
+          <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
+          <span class="expand-icon">+</span>
+        </div>
+        <div id="blog-content-{{ forloop.index }}" class="blog-card-content">
+          {{ post.content }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  function toggleBlogContent(index) {
+    var content = document.getElementById("blog-content-" + index);
+    var header = content.previousElementSibling;
+    var expandIcon = header.querySelector(".expand-icon");
+    
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      expandIcon.textContent = "+";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      expandIcon.textContent = "-";
+    }
+  }
+</script>
