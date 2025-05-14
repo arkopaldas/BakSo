@@ -1,4 +1,39 @@
 ---
-layout: home
+layout: default
 title: Home
 ---
+
+<div class="home-section">
+  <h2>Welcome</h2>
+  <p>I am a PhD student in Statistics at the University of Michigan, Ann Arbor. My research interests lie in the interface of theoretical machine learning and statistical inference. I am particularly interested in creating and implementing innovative statistical techniques for inference after adaptive modeling of data.</p>
+  
+  <img src="{{ site.github.url }}/assets/img/profile.jpg" alt="Soham Bakshi" class="profile-image">
+</div>
+
+<div class="home-section">
+  <h2>News</h2>
+  <ul class="news-list">
+    <li><strong>May 2025:</strong> Working on Large Language Model Collapse and Prevention Strategies with Sunrit Chakraborty.</li>
+    <li><strong>January 2025:</strong> Submitted paper "Inference with Randomized TREEs" to JASA.</li>
+    <li><strong>January 2025:</strong> Submitted paper "Selective Inference for Effect Modification: Applications in Mobile Health" to JASA.</li>
+    <li><strong>January 2024:</strong> Mentoring undergraduate students in the Undergraduate Research Program in Statistics (URPS).</li>
+  </ul>
+</div>
+
+<div class="home-section">
+  <h2>Recent Blog Posts</h2>
+  <div class="catalogue">
+    {% for post in site.posts limit:3 %}
+      <a href="{{ site.github.url }}{{ post.url }}" class="catalogue-item">
+        <div>
+          <h3 class="catalogue-title">{{ post.title }}</h3>
+          <div class="catalogue-line"></div>
+          <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+          <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+  
+  <a href="{{ site.github.url }}/blog.html" class="more-posts">View All Posts →</a>
+</div>
