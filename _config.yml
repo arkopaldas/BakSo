@@ -1,29 +1,30 @@
-# Site Build Settings
+# Site settings
+title:          Soham Bakshi
+description:    "Statistical Analyst and Researcher"
+baseurl:        "/BakSo"
+url:            "https://arkopaldas.github.io"
 
-# Jekyll-paginate-v2 configuration
-#  pagination:
-#   enabled: true
-#   per_page: 5
-#   permalink: '/page/:num/'
-#   title: ':title - page :num of :max'
-#   limit: 0
-#   sort_field: 'date'
-#   sort_reverse: true
-
-# jekyll-paginate configuration
-paginate:            5
+paginate:       5
 
 # Build settings
-markdown:            kramdown
+markdown:       kramdown
 highlighter:         rouge
-permalink:           /:title
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+permalink:      /:year-:month-:day/:title
 
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           'Lagrange'
-description:	       'a minimalist Jekyll theme'
-author:              'Paul Le'
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# RSS 2.0 can be used instead of Atom by uncommenting following two lines
-#feed:
-#  path: rss-feed.xml
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Author
+author:
+  name:         Soham Bakshi
+  url:          https://arkopaldas.github.io/BakSo
+  email:        bakso@umich.edu
