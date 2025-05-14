@@ -9,11 +9,11 @@ google-ID: ''
 # Menu settings
 menu:
   - {name: 'Home', path: 'index.html'}
-  - {name: 'Research', path: 'research.html'}
-  - {name: 'Resume', path: 'resume.html'}
-  - {name: 'Blog', path: 'blog.html'}
-  - {name: 'Contact', path: 'contact.html'}
-  - {name: 'About', path: 'about.html'}
+  - {name: 'Research', path: 'menu/research.html'}
+  - {name: 'Resume', path: 'menu/resume.html'}
+  - {name: 'Blog', path: 'menu/blog.html'}
+  - {name: 'Contact', path: 'menu/contact.html'}
+  - {name: 'About', path: 'menu/about.html'}
 
 # Available social icons are powered by Font Awesome. For more info, check: https://fontawesome.com/icons
 social:
